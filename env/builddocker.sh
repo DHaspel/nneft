@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Stop the container if running
-if [ $(docker ps | grep nneft | wc -l) -ne 0 ]
+if [ "$(docker ps | grep -c nneft)" -ne 0 ]
 then
   docker stop nneft
 fi
 
 # Delete the container if existing
-if [ $(docker container ls -a | grep nneft | wc -l) -ne 0 ]
+if [ "$(docker container ls -a | grep -c nneft)" -ne 0 ]
 then
   docker rm nneft
 fi

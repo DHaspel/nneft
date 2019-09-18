@@ -17,7 +17,7 @@
 
 
 from setuptools import setup
-from nneft import __author__, __version__, __license__, __email__
+from .nneft import __author__, __version__, __license__, __email__
 
 
 def get_readme() -> str:
@@ -50,7 +50,7 @@ setup(
     author_email=__email__,
     description='???',  # todo: add description
     long_description=get_readme(),
-    url='???',  # todo: set package url
+    url='https://github.com/DHaspel/nneft',
     license=__license__,
     keywords='???',  # todo: add keywords
     packages=['nneft'],
